@@ -1,0 +1,203 @@
+
+
+:root{
+    --card : #00751d;;
+
+}
+#consequence{
+    margin : 5% 0;
+}
+#consequence h1{
+    text-transform: uppercase;
+    margin : 0 2%;
+    line-height: 100px;
+    color : var(--primary);
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    opacity: 0;
+
+}
+.card{
+    position: relative;
+    margin : 20px 2%;
+    width : 95%;
+    height : 70vh;
+    opacity: 0;
+}
+.card .image{
+    position: absolute;
+    width : 60%;
+    height : 100%;
+    background-position: top;
+    background-size: cover;
+}
+
+.card .description{
+    position: absolute;
+    text-align: center;
+    padding :20px;
+    bottom : 0;
+    width : 42%;
+    height : 60%;
+    -webkit-box-shadow: 0 0 5px rgb(49, 47, 47);
+            box-shadow: 0 0 5px rgb(49, 47, 47);
+    background: var(--card);
+}
+.card .description p{
+    color : var(--primary2);
+}
+.c1, .c3{
+    left : 58%;
+}
+.img2{
+    right : 0;
+}
+.c2{
+   right : 58%; 
+}
+.card .description h2{
+    margin : 20px 0;
+    color : var(--text);
+    text-transform: uppercase;
+}
+.img1{
+    background: url("./image2.jpg");
+}
+.img2{
+    background: url("./doro-tanety.webp");
+}
+.img3{
+    background: url("./image3.jfif");
+}
+@-webkit-keyframes apparition {
+    from{
+        width : 60%;
+        height : 100%; 
+        left : 0;
+    }
+    to{
+        width : 42%;
+        height : 60%;
+        right : 0;
+    }
+}
+@keyframes apparition {
+    from{
+        width : 60%;
+        height : 100%; 
+        left : 0;
+    }
+    to{
+        width : 42%;
+        height : 60%;
+        right : 0;
+    }
+}
+
+@-webkit-keyframes apparition2 {
+    from{
+        width : 60%;
+        height : 100%; 
+        right : 0;
+    }
+    to{
+        width : 42%;
+        height : 60%;
+        left : 0;
+    }
+}
+
+@keyframes apparition2 {
+    from{
+        width : 60%;
+        height : 100%; 
+        right : 0;
+    }
+    to{
+        width : 42%;
+        height : 60%;
+        left : 0;
+    }
+}
+
+@media (max-width : 580px){
+    #consequence h1{
+        font-size: 1.3em;
+        line-height: 50px;
+    }
+    .card{
+        margin : 20px 0;
+    }
+    .card .image{
+        height : 50vh;
+        width : 80%;
+    }
+    .card .description{
+        bottom: 20%;
+        height : 50%;
+        width : 90%;
+        background: #814a1662;
+        -webkit-backdrop-filter: blur(3px);
+                backdrop-filter: blur(3px);
+    }
+    .c1, .c3{
+        left : 15.5%;
+    }
+    .c2{
+        right : 15.5%; 
+     }
+
+
+     @-webkit-keyframes apparition {
+        from{
+            height : 50vh;
+            width : 80%;
+            left : 0;
+        }
+        to{
+            height : 50%;
+            width : 90%;
+            right : 0;
+        }
+    }
+
+
+     @keyframes apparition {
+        from{
+            height : 50vh;
+            width : 80%;
+            left : 0;
+        }
+        to{
+            height : 50%;
+            width : 90%;
+            right : 0;
+        }
+    }
+    @-webkit-keyframes apparition2 {
+        from{
+            height : 50vh;
+            width : 80%;
+            right : 0;
+        }
+        to{
+            height : 50%;
+            width : 90%;
+            left : 0;
+        }
+    }
+    @keyframes apparition2 {
+        from{
+            height : 50vh;
+            width : 80%;
+            right : 0;
+        }
+        to{
+            height : 50%;
+            width : 90%;
+            left : 0;
+        }
+    }
+}
+

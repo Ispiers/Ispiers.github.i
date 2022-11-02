@@ -1,0 +1,542 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*:root{
+    --bg : #3f3126;
+    --gris : #802a00;
+    --text : #f1e9db;
+    --bgImage : url("./bg3.jpg")
+}
+*/
+@font-face {
+    font-family: "kolker";
+    src: url("./Kolker_Brush.zip");
+}
+:root{
+    --bg : rgb(225, 238, 217);
+    --bgImage : url("./bg3.jpg");
+    --primary : #0F0711;
+    --primary2 : #201e1e; 
+    --gradient:linear-gradient(to right top, #0F0711, #33121B);
+    --text1 : #fff; 
+    --text2 : rgb(235, 207, 207);
+}
+html{
+    scroll-behavior: smooth;
+}
+*,body{
+    margin : 0;
+    padding : 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: var(--bg);
+}
+
+#container{
+    position: relative;
+    padding: 5% 2%;
+    width : 100%;
+    height : 100vh;
+    background: var(--primary);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%,0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%,0 100%);
+    overflow: hidden;
+}
+
+#container .text{
+    width : 100%;
+    height : 100%;
+    padding : 3% 0;
+}
+
+#container .text h1{
+    font-family: "kolker", sans-serif;
+    font-size: 500%;
+    color : var(--text1);
+    text-transform: uppercase;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+}
+.changing{
+    -webkit-animation: opacity 2s linear infinite;
+            animation: opacity 2s linear infinite;
+}
+#container .text .explication{
+    width: 60%;
+    overflow-wrap: break-word;
+    color : var(--text2)
+}
+#container .mouve{
+    position: absolute;
+    left : 5%;
+    height: 85%;
+    width: 85%;
+    -webkit-animation: mouver 6s ease infinite;
+            animation: mouver 6s ease infinite; 
+    z-index: -1;
+}
+#container .mouve div{
+    position: absolute;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,.4)), to(rgba(0, 0, 0,.1))) , var(--bgImage);
+    background: -o-linear-gradient(left, rgba(0,0,0,.4), rgba(0, 0, 0,.1)) , var(--bgImage);
+    background: linear-gradient(to right, rgba(0,0,0,.4), rgba(0, 0, 0,.1)) , var(--bgImage);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.box1{
+    left : 0;
+    bottom  : 0;
+    width : 50%;
+    height : 90%;
+    -webkit-animation: box1 20s linear 2s infinite;
+            animation: box1 20s linear 2s infinite; 
+}
+.box2{
+    right : 0;
+    bottom  : 0;
+    width : 46%;
+    height : 48%;
+    -webkit-animation: box2 20s linear 2s infinite;
+            animation: box2 20s linear 2s infinite; 
+}
+.box3{
+    right : 0;
+    top  : 0;
+    width : 44%;
+    height : 45%;
+    -webkit-animation: box3 20s linear 2s infinite;
+            animation: box3 20s linear 2s infinite; 
+}
+
+@-webkit-keyframes mouver {
+    0%{
+        left : 5%;
+        top : 5%
+    }
+    20%{
+        left : 15%;
+        top :15%;
+    }
+    40%{
+        left : 10%;
+        top : 0;
+    }
+    60%{
+        left : 2%;
+        top : 10%;
+    }
+    75%{
+        left :9%;
+        top : 15%;
+    }
+    85%{
+        left : 5%;
+        top : 5%;
+    }
+    100%{
+        left : 5%;
+        top : 5%  
+    }
+    
+}
+
+@keyframes mouver {
+    0%{
+        left : 5%;
+        top : 5%
+    }
+    20%{
+        left : 15%;
+        top :15%;
+    }
+    40%{
+        left : 10%;
+        top : 0;
+    }
+    60%{
+        left : 2%;
+        top : 10%;
+    }
+    75%{
+        left :9%;
+        top : 15%;
+    }
+    85%{
+        left : 5%;
+        top : 5%;
+    }
+    100%{
+        left : 5%;
+        top : 5%  
+    }
+    
+}
+
+@-webkit-keyframes opacity {
+    0%{
+        opacity : 0;
+    }
+    50%{
+        opacity : 1;
+    }
+    100%{
+        opacity : 1
+    }
+    
+}
+
+@keyframes opacity {
+    0%{
+        opacity : 0;
+    }
+    50%{
+        opacity : 1;
+    }
+    100%{
+        opacity : 1
+    }
+    
+}
+
+
+@media (max-width : 1000px){
+    #container .text h1{
+        font-size: 400%;
+    }
+}
+@media (max-width : 600px){
+    #container{
+        width : 100%;
+        padding : 10% 2%;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%,0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 90%,0 100%);
+    }
+    #container .text .explication{
+        width : 90%;
+    }
+    #container .text h1{
+        font-size: 200%;
+    }
+}
+
+@-webkit-keyframes box1 {
+    0%{
+        left : 0;
+        bottom  : 0;
+        width : 50%;
+        height : 90%;
+    }
+    15%{
+        left : 0;
+        bottom  : 0;
+        width : 50%;
+        height : 90%;
+    }
+    20%{
+        left : 56%;
+        bottom  : 0;
+        width : 46%;
+        height : 48%;
+    }
+    40%{
+        left : 55%;
+        bottom  : 0;
+        width : 46%;
+        height : 48%;
+    }
+    45%{
+        left : 55%;
+        bottom  : 56%;
+        width : 44%;
+        height : 45%;
+    }
+    70%{
+        left : 55%;
+        bottom  : 56%;
+        width : 44%;
+        height : 45%;
+    }
+    75%{
+        left : 0;
+        bottom  : 0;
+        width : 50%;
+        height : 90%;
+    }
+    100%{
+        left : 0;
+        bottom  : 0;
+        width : 50%;
+        height : 90%;
+    }
+
+}
+
+@keyframes box1 {
+    0%{
+        left : 0;
+        bottom  : 0;
+        width : 50%;
+        height : 90%;
+    }
+    15%{
+        left : 0;
+        bottom  : 0;
+        width : 50%;
+        height : 90%;
+    }
+    20%{
+        left : 56%;
+        bottom  : 0;
+        width : 46%;
+        height : 48%;
+    }
+    40%{
+        left : 55%;
+        bottom  : 0;
+        width : 46%;
+        height : 48%;
+    }
+    45%{
+        left : 55%;
+        bottom  : 56%;
+        width : 44%;
+        height : 45%;
+    }
+    70%{
+        left : 55%;
+        bottom  : 56%;
+        width : 44%;
+        height : 45%;
+    }
+    75%{
+        left : 0;
+        bottom  : 0;
+        width : 50%;
+        height : 90%;
+    }
+    100%{
+        left : 0;
+        bottom  : 0;
+        width : 50%;
+        height : 90%;
+    }
+
+}
+
+@-webkit-keyframes box2 {
+    0%{
+        right : 0;
+        bottom  : 0;
+        width : 46%;
+        height : 48%;
+    }
+    15%{
+        right : 0;
+        bottom  : 0;
+        width : 46%;
+        height : 48%; 
+    }
+    20%{
+        right : 0;
+        bottom  : 56%;
+        width : 46%;
+        height : 48%;
+    }
+    40%{
+        right : 0;
+        bottom  : 56%;
+        width : 46%;
+        height : 48%;
+    }
+    45%{
+        right : 50%;
+        bottom  : 5%;
+        width : 50%;
+        height : 90%;
+    }
+    70%{
+        right : 50%;
+        bottom  : 5%;
+        width : 50%;
+        height : 90%;
+    }
+    75%{
+        right : 0;
+        bottom  : 0;
+        width : 46%;
+        height : 48%;
+    }
+    100%{
+        right : 0;
+        bottom  : 0;
+        width : 46%;
+        height : 48%;
+    }
+
+}
+
+@keyframes box2 {
+    0%{
+        right : 0;
+        bottom  : 0;
+        width : 46%;
+        height : 48%;
+    }
+    15%{
+        right : 0;
+        bottom  : 0;
+        width : 46%;
+        height : 48%; 
+    }
+    20%{
+        right : 0;
+        bottom  : 56%;
+        width : 46%;
+        height : 48%;
+    }
+    40%{
+        right : 0;
+        bottom  : 56%;
+        width : 46%;
+        height : 48%;
+    }
+    45%{
+        right : 50%;
+        bottom  : 5%;
+        width : 50%;
+        height : 90%;
+    }
+    70%{
+        right : 50%;
+        bottom  : 5%;
+        width : 50%;
+        height : 90%;
+    }
+    75%{
+        right : 0;
+        bottom  : 0;
+        width : 46%;
+        height : 48%;
+    }
+    100%{
+        right : 0;
+        bottom  : 0;
+        width : 46%;
+        height : 48%;
+    }
+
+}
+
+@-webkit-keyframes box3 {
+    0%{
+        right : 0;
+        top  : 0;
+        width : 44%;
+        height : 45%;
+    }
+    15%{
+        right : 0;
+        top  : 0;
+        width : 44%;
+        height : 45%; 
+    }
+    20%{
+        right : 50%;
+        top  : 5%;
+        width : 50%;
+        height : 90%;
+    }
+    40%{
+        right : 50%;
+        bottom  : 5%;
+        width : 50%;
+        height : 90%;
+    }
+    45%{
+        right : 0;
+        top  : 55%;
+        width : 46%;
+        height : 48%;
+    }
+    70%{
+        right : 0;
+        top  : 55%;
+        width : 46%;
+        height : 48%;
+    }
+    75%{
+        right : 0;
+        top  : 0;
+        width : 44%;
+        height : 45%;
+    }
+    100%{
+        right : 0;
+        top  : 0;
+        width : 44%;
+        height : 45%;
+    }
+
+}
+
+@keyframes box3 {
+    0%{
+        right : 0;
+        top  : 0;
+        width : 44%;
+        height : 45%;
+    }
+    15%{
+        right : 0;
+        top  : 0;
+        width : 44%;
+        height : 45%; 
+    }
+    20%{
+        right : 50%;
+        top  : 5%;
+        width : 50%;
+        height : 90%;
+    }
+    40%{
+        right : 50%;
+        bottom  : 5%;
+        width : 50%;
+        height : 90%;
+    }
+    45%{
+        right : 0;
+        top  : 55%;
+        width : 46%;
+        height : 48%;
+    }
+    70%{
+        right : 0;
+        top  : 55%;
+        width : 46%;
+        height : 48%;
+    }
+    75%{
+        right : 0;
+        top  : 0;
+        width : 44%;
+        height : 45%;
+    }
+    100%{
+        right : 0;
+        top  : 0;
+        width : 44%;
+        height : 45%;
+    }
+
+}
