@@ -118,4 +118,7 @@
         background-position: center top;
         background-size: cover;
     }
+    #encourage .encourage-text h1, #encourage .encourage-text p{
+        color :#fff;
+    }
 }
